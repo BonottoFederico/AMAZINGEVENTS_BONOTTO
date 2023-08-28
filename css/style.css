@@ -2,5 +2,17 @@
     height: 20vh;
 }
 body{
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/optional_banner_4.jpg);
+    background-size: cover;
+    min-height: 70vh;
 }
+main{
+    flex-grow: 1;
+}
+.navbar-nav a:hover, .card a:hover{
+    background-color: white;
+    color: black !important;
+}
+
