@@ -1,4 +1,12 @@
-const fechaActual = new Date(data.currentDate);
-let eventosFuturos = data.events.filter(evento => new Date (evento.date) >= fechaActual);
-crearCards('contenedorCards', eventosFuturos);
-crearCheck('contCheck', data.events);
+bringData(inicio)
+function inicio(data) {
+    let eventosFuturos = filtrarEventosFuturos(data);
+    crearCards('contenedorCards', eventosFuturos);
+    crearCheck('contCheck', data.events);
+    contenedorBarra.addEventListener("input", function () {
+        filtrado(eventosFuturos);
+    });
+    contenedorCheck.addEventListener("change", function () {
+        filtrado(eventosFuturos);
+    });
+}
